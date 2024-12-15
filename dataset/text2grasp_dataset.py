@@ -309,7 +309,7 @@ class Text2GraspDataset(Dataset):
         valid_obj_idxs = []  # start 1
         grasp_labels = {}
         for obj_id in tqdm(obj_ids, desc='Loading grasping labels...'):
-            if obj_id == 20: continue
+            if obj_id == 19: continue
             valid_obj_idxs.append(obj_id)  # here align with label png
             label = np.load(os.path.join(self.root, 'grasp_label', '{}_labels.npz'.format(str(obj_id - 1).zfill(3))))
             tolerance = np.load(
